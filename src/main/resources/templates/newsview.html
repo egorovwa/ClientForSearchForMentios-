@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>News Hendle</title>
+    <link rel="stylesheet" href="/style.css" />
+    </style>
+</head>
+<body>
+<section>
+        <div th:each="tr : ${news}" style="display: inline-block" class="ndiv" >
+            <img th:href="${tr.url}" th:src="${tr.urlToImage}" />
+            <h4  th:text="${tr.title}"/>
+            <h5 th:text="${tr.newsSource}"/>
+            <p th:text="${tr.description}"/>
+            <p th:text="'Status: '+${tr.positiveStatus}"/>
+            <p th:text="${tr.word}"/>
+        </div>
+</section>
+
+</body>
+</html>

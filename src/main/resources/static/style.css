@@ -1,0 +1,17 @@
+div {
+    width: min-content;
+    height: auto;
+    display: inline-block;
+    margin-outside: 35px;
+    border: crimson;
+    border-style: solid;
+    border-width: medium;
+}
+
+img {
+    width: 100px;
+    height: min-content;
+}
+.radio_st {
+    display: inline;
+}

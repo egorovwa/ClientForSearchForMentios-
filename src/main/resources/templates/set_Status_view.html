@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SET STATUS</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<section>
+    <div th:each="tr : ${news}" style="display: inline-block" class="ndiv" >
+        <img th:src="${tr.urlToImage}" />
+        <h4 th:text="${tr.title}"/>
+        <h5 th:text="${tr.newsSource}"/>
+        <p th:text="${tr.description}"/>
+        <p th:text="${tr.word}"/>
+        <!--<form method="post" th:field="*{tr}"-->
+    </div>
+</section>
+
+</body>
+</html>
