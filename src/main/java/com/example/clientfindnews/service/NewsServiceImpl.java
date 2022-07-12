@@ -21,18 +21,9 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public void setStatusNews(InStatus inStatus) {
+    public void setStatusNews(News news) {
+        clientFindNews.updateNews(news);
 
-        if (inStatus.getStatus().toLowerCase(Locale.ROOT).equals(POSITIVE.toString().toLowerCase())){
-
-            clientFindNews.selectStatus(POSITIVE,inStatus.getNewsId());
-        }else if (inStatus.getStatus().toLowerCase(Locale.ROOT).equals(NEUTRAL.toString().toLowerCase())){
-            clientFindNews.selectStatus(NEUTRAL,inStatus.getNewsId());
-        } else if (inStatus.getStatus().toLowerCase(Locale.ROOT).equals(NEGTIVE.toString().toLowerCase())) {
-            clientFindNews.selectStatus(NEGTIVE,inStatus.getNewsId());
-        }else {
-            clientFindNews.selectStatus(UNDEFINDED,inStatus.getNewsId());
-        }
     }
 
     @Override

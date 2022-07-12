@@ -9,9 +9,10 @@
 <body>
 <section>
         <div th:each="tr : ${news}" style="display: inline-block" class="ndiv" >
-            <img th:href="${tr.url}" th:src="${tr.urlToImage}" />
-            <h4  th:text="${tr.title}"/>
+            <img th:src="${tr.urlToImage}" />
+            <h4  th:text="${tr.title}" th:href="${tr.url}"/>
             <h5 th:text="${tr.newsSource}"/>
+            <h5 th:text="'Опубликованно: '+ ${tr.publishedAt}"/>
             <p th:text="${tr.description}"/>
             <p th:text="'Status: '+${tr.positiveStatus}"/>
             <p th:text="${tr.word}"/>

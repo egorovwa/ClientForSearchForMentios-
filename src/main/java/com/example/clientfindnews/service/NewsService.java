@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface NewsService {
    List<News> findAllNews();
-   void setStatusNews(InStatus inStatus);
+   void setStatusNews(News news);
 
     List<News> findByPositiveStatus();
 }

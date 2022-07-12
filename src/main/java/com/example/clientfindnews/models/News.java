@@ -14,7 +14,7 @@ public class News {
     private String urlToImage;
     private String publishedAt;
     private String content;
-    PositiveStatus positiveStatus = PositiveStatus.UNDEFINDED;
+    private String positiveStatus;
     private Category category;
     private RequestWord word;
 

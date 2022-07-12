@@ -5,9 +5,9 @@ import com.example.clientfindnews.models.PositiveStatus;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 
@@ -19,7 +19,7 @@ public interface ClientFindNews {
 
     @GetMapping("/news/status")
     public List<News> findByPositivStatusStatusNews(@RequestParam PositiveStatus positiveStatus);
-    @PutMapping("/status/{id}")
-    public News selectStatus(@RequestParam PositiveStatus positiveStatus, @PathParam("id") int id);
+    @PutMapping("/news")
+    public News updateNews(@RequestBody News news);
 
 }
